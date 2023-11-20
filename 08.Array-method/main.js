@@ -18,14 +18,14 @@
 
 // Nəticə: 3
 
-function charCount(resource, char) {
-  let count = 0;
-  for (i = 0; i < resource.length; i++) {
-    if (resource[i] === char) {
-      count++;
-    }
-  }
-  return count;
-}
-console.log(charCount('w3rescource.com', 'c'));
+// function charCount(resource, char) {
+//   let count = 0;
+//   for (i = 0; i < resource.length; i++) {
+//     if (resource[i] === char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(charCount('w3rescource.com', 'c'));
 
