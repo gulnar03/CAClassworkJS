@@ -29,10 +29,39 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
 
-function upperCase(str) {
-  let array = str.split(" ");
-  let result = array.map((element) => element[0].toLocaleUpperCase() + element.slice(1));
-return result.join(' ')
-}
+// function upperCase(str) {
+//   let array = str.split(" ");
+//   let result = array.map((element) => element[0].toLocaleUpperCase() + element.slice(1));
+// return result.join(' ')
+// }
 
-console.log(upperCase("the quick brown fox"));
+// console.log(upperCase("the quick brown fox"));
+
+// ------------------------------------------------------- TASK 4 -------------------------------------------------------
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  city: "Ganja",
+  website: "code.edu.az",
+  languageInfo: {
+    eng: "Advance",
+    aze: "Fluenty",
+    rus: "Intermediate",
+  },
+};
+
+// person adlı object-dən firstName-i, languageInfo-dan eng və rus property-ni destructing edin, əlavə olaraq
+// personda yerdə qalan bütün property-ləri otherInfo adı altında rest operatoru ilə bir dəyişənə çıxarın.
+
+// console.log(eng); // "Advance"
+// console.log(otherInfo); // {lastName: 'Doe', city: 'Ganja', website: 'code.edu.az'}
+
+// let {
+//   firstName: firstName,
+//   languageInfo: { eng, rus },
+// } = person;
+
+// console.log(eng);
+let { firstName, languageInfo, ...otherInfo } = person;
+console.log(otherInfo);
