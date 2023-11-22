@@ -27,11 +27,12 @@
 let header = document.querySelector("header");
 header.style.backgroundColor = "black";
 header.style.color = "white";
+let headerClass = document.querySelector(".header");
+headerClass.style.display = "flex";
+headerClass.style.justifyContent = "space-between";
+headerClass.style.alignItems = "center";
 let container = document.querySelector(".container");
-container.style.display = "flex";
-container.style.justifyContent = "space-between";
-container.style.alignItems = "center";
-container.style.margin = "auto";
+container.style.margin = "0 auto";
 let navBar = document.querySelector(".nav-bar");
 navBar.style.display = "flex";
 navBar.style.gap = "30px";
