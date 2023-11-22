@@ -12,9 +12,7 @@
 //   }
 // }
 // console.log("Max: ", max, "Min: ", min);
-
 // TASK 2
-
 // let numbers = [12, 45, 6, 78, 34, 99, 23];
 // let sum = 0;
 // for (let i = 0; i < numbers.length; i++) {
@@ -41,6 +39,3 @@
 // console.log(array);
 
 // TASK 5
-
-
-

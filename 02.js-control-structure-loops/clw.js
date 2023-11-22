@@ -36,7 +36,7 @@
 //   if (d % index === 0) console.log(index);
 // }
 
-// TASK 6
+// TASK 5
 
 let m = 40;
 while (m) {
