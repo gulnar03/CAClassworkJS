@@ -21,7 +21,7 @@ mulBtn.addEventListener("click", function () {
   result.innerText = count;
 });
 divideBtn.addEventListener("click", function () {
-  count = +input1.value % +input2.value;
+  count = +input1.value / +input2.value;
   result.innerText = count;
 });
 resetBtn.addEventListener("click", function () {
