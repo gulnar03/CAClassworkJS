@@ -1,0 +1,42 @@
+let input = document.querySelector("#value-list");
+let btn = document.querySelector(".add");
+let ul = document.querySelector(".ul");
+btn.style.backgroundColor = "teal";
+btn.style.width = "80px";
+btn.style.padding = "10px";
+btn.style.border = "none";
+btn.style.borderRadius = "5px";
+input.style.width = "45%";
+input.style.height = "20px";
+input.style.borderRadius = "8px";
+input.style.padding = "10px";
+
+btn.addEventListener("click", function () {
+  let list = document.createElement("li");
+  let span = document.createElement("span");
+  let delBtn = document.createElement("button");
+  span.innerText = input.value;
+  list.append(span, delBtn);
+  ul.append(list);
+  input.value = "";
+  list.style.listStyle = "none";
+  list.style.backgroundColor = "pink";
+  list.style.width = "50%";
+  list.style.margin = "20px";
+  list.style.justifyContent = "space-between";
+  list.style.display = "flex";
+  list.style.alignItems = "center";
+  list.style.padding = "10px";
+  list.style.borderRadius = "8px";
+  delBtn.addEventListener("click", function () {
+    this.parentElement.remove();
+  });
+  delBtn.style.padding = "15px";
+  delBtn.style.border = "none";
+  delBtn.style.borderRadius = "8px";
+  delBtn.style.width = "80px";
+  span.style.padding = "10px";
+  delBtn.innerText = "Delete";
+  delBtn.style.color = "white";
+  delBtn.style.backgroundColor = "red";
+});
