@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .calculator {
         background-color: peachpuff;
         border-radius: 10px;
         border: none;
         width: 500px;
         height: 600px;
+        align-items: center;
+        justify-content: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
       }
       span {
         background-color: black;
@@ -27,7 +32,7 @@
         padding: 5px;
       }
       button {
-        width: 100px;
+        width: 80%;
         height: 30px;
       }
       .reset {
@@ -43,25 +48,27 @@
     </style>
   </head>
   <body>
-    <div class="calculator">
-      <h1>Simple calculator</h1>
-      <br />
-      <span class="result">0</span>
-      <br />
-      <div class="search">
-        <input type="number" id="value-1" placeholder="Value1" />
-        <input type="number" id="value-2" placeholder="Value2" />
+    <div class="container">
+      <div class="calculator">
+        <h1>Simple calculator</h1>
+        <br />
+        <span class="result">0</span>
+        <br />
+        <div class="search">
+          <input type="number" id="value-1" placeholder="Value1" />
+          <input type="number" id="value-2" placeholder="Value2" />
+        </div>
+        <br />
+        <button class="add">Addition</button>
+        <br />
+        <button class="substract">Substract</button>
+        <br />
+        <button class="multiply">Multipy</button>
+        <br />
+        <button class="divide">Division</button>
+        <br />
+        <button class="reset">Reset</button>
       </div>
-      <br />
-      <button class="add">Addition</button>
-      <br />
-      <button class="substract">Substract</button>
-      <br />
-      <button class="multiply">Multipy</button>
-      <br />
-      <button class="divide">Division</button>
-      <br />
-      <button class="reset">Reset</button>
     </div>
     <script src="./main.js"></script>
   </body>

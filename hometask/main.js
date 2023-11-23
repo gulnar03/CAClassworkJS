@@ -9,19 +9,19 @@ let resetBtn = document.querySelector(".reset");
 
 let count = 0;
 addBtn.addEventListener("click", function () {
-  count += +input1.value + +input2.value;
+  count = +input1.value + +input2.value;
   result.innerText = count;
 });
 subBtn.addEventListener("click", function () {
-  count += +input1.value - +input2.value;
+  count = +input1.value - +input2.value;
   result.innerText = count;
 });
 mulBtn.addEventListener("click", function () {
-  count += +input1.value * +input2.value;
+  count = +input1.value * +input2.value;
   result.innerText = count;
 });
 divideBtn.addEventListener("click", function () {
-  count += +input1.value % +input2.value;
+  count = +input1.value % +input2.value;
   result.innerText = count;
 });
 resetBtn.addEventListener("click", function () {
