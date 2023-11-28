@@ -36,24 +36,7 @@ button {
   width: 80px;
   height: 30px;
 }
-.menu-bar {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  text-align: center;
-  background-color: rgb(119, 114, 114);
-  height: 0;
-  overflow: hidden;
-}
-.menu-bar nav ul {
-  display: flex;
-  flex-direction: column;
-}
-.open-menu {
-  height: 100vh;
-}
-.fa-solid.fa-bars {
+.fa-solid {
   color: white;
   display: none;
   cursor: pointer;
@@ -62,20 +45,28 @@ button {
   height: 150vh;
   background-color: teal;
 }
+
 @media screen and (max-width: 1199px) {
   .container {
     padding: 0 5%;
   }
 }
 @media screen and (max-width: 767px) {
-  nav {
+  .nav-list {
     display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    
   }
-  .fa-solid.fa-bars {
+  .fa-solid {
     display: flex;
+  }
+  .open-menu {
+    height: 100vh;
+    display: block;
   }
 }
 .header-scroll {
   padding: 15px 0;
-  
 }
