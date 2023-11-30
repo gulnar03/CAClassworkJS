@@ -26,6 +26,8 @@ emailInput.style.width = "100%";
 passwordInput.style.width = "100%";
 emailInput.style.width = "100%";
 passwordInput.style.width = "100%";
+emailInput.type = "email";
+passwordInput.type = "password";
 
 loginBtn.style.width = "200px";
 loginBtn.style.height = "40px";
@@ -36,20 +38,22 @@ loginBtn.style.backgroundColor = "blue";
 loginBtn.style.border = "none";
 loginBtn.style.borderRadius = "15px";
 loginBtn.style.color = "white";
-let arr = [];
+let user= JSON.parse(localStorage.getItem("user"))??[];
 form.addEventListener("submit", function (event) {
-  if (emailInput.value !== "" && passwordInput.value !== "") {
-    let inputObj = {
-      email: emailInput.value,
-      password: passwordInput.value,
-    };
-    arr.push(inputObj);
-    console.log(inputObj);
-  } else {
-    window.alert("Zehmet olmasa formu doldurun");
-  }
+  let inputObj = {
+    email: emailInput.value,
+    password: passwordInput.value,
+  };
+user.push(inputObj);
+  user.forEach((item) => {
+    if (item.email === emailInput.value && item.password == passwordInput.value) {
+      window.location.href = "http://127.0.0.1:5501/home.html";
+    } else {
+      window.location.href = "http://127.0.0.1:5501/signup.html";
+    }
+  });
   event.preventDefault();
-  console.log((window.location.href = "http://127.0.0.1:5501/signup.html"));
-  localStorage.setItem("user", JSON.stringify(arr));
-  JSON.parse(localStorage.getItem("user"));
+  localStorage.setItem("user", JSON.stringify(user));
+  emailInput.value = "";
+  passwordInput.value = "";
 });
