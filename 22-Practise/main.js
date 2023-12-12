@@ -70,18 +70,25 @@ const employees = {
 // console.log(Object.values(employees));
 
 // 3. Aşağıdakı kimi console-a çıxardın.
-    // [firstName: 'Michael']
-    // [lastName: 'Pam']
-    // [age:26]
-    // [city: 'Poland']
+// [firstName: 'Michael']
+// [lastName: 'Pam']
+// [age:26]
+// [city: 'Poland']
 // console.log(Object.entries(employees));
 // 4. object-in age propertysini silin.
 // delete employees.age;
 
 // 5. Ən uzun string value-nu console-a çıxardın.
-let arr = Object.values(employees);
-let  str=arr.reduce((a, b) =>console.log(a,b),"");
-console.log(str);
+// let max = Object.values(employees)[0];
+
+// for (let item in employees) {
+//   if (employees[item].length > max.length) {
+//     max = employees[item];
+//   }
+// }console.log(max);
+
+// console.log(Object.values(employees).sort((a, b) => b.length - a.length)[0]);
+
 // ------------------------------
 
 // TASK 4
