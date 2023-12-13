@@ -31,3 +31,14 @@ async function deleteUser(id, btn) {
     await axios.delete(`${BASE_URl}/users/${id}`);
   }
 }
+
+async function addToFav(id) {
+  const res = await axios(`${BASE_URl}/users/${id}`);
+  let item = favItem.find((element) => element.id === id);
+  if (!item) {
+    favItem.push(res.data);
+    localStorage.setItem("user", JSON.stringify(favItem));
+  } else {
+    alert("this item already in favorite");
+  }
+}

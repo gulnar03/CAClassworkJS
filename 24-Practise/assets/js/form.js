@@ -20,10 +20,12 @@ goBackBtn.addEventListener("click", function () {
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  let date = new Date();
   let users = {
     name: allInputs[0].value,
     surname: allInputs[1].value,
     email: allInputs[2].value,
+    date: date.toLocaleString(),
   };
   if (!id) {
     let date = new Date();
