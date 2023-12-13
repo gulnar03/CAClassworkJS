@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  position: relative;
+  background-color: rgb(231, 205, 174);
+  height: 50px;
+  position: fixed;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+.header nav ul li a {
+  color: black;
+}
+#section-1 {
+  height: 100vh;
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+#form img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#form-fill {
+  padding-top: 70px;
+  height: 100vh;
+}
