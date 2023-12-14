@@ -1,11 +1,12 @@
 const tBody = document.querySelector("tbody");
-const BASE_URl = "http://localhost:3000";
+const BASE_URl = "http://localhost:3000/";
 async function getData() {
   const res = await axios(`${BASE_URl}/users`);
   console.log(res.data);
   drawTAble(res.data);
 }
 getData();
+let favItem = JSON.parse(localStorage.getItem("user")) ?? [];
 
 function drawTAble(data) {
   tBody.innerHTML = "";
@@ -20,7 +21,7 @@ function drawTAble(data) {
     <td>
     <a  class="btn btn-success" href="form.html?id=${element.id}">Edit</a>
    <button type="button" class="btn btn-danger" onclick=deleteUser(${element.id},this)>Delete</button>
-    <a class="btn btn-primary">Add Fav</a>
+    <button type="button" class="btn btn-primary" oclick=addToFav(${element.id})>Add Fav</button>
     </td>`;
     tBody.append(trElem);
   });

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+  width: 30%;
+  height: 50vh;
+  gap: 30px;
+}
+.card-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.card input {
+  padding: 10px;
+  border-radius: 5px;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fa-solid {
+  color: black;
+}
+.card-top {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.description {
+  border-left: 3px solid green;
+}
